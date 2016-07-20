@@ -1,0 +1,9 @@
+/bin/
+target/
+
+.DS_STORE
+*.local
+*.log
+*.class
+*.xls
+*.png
