@@ -12,7 +12,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 
 
-public abstract class Login  extends Page{
+public  class Login  extends Page{
 	
 	@FindBy(css="button.facebook:nth-child(1)") public WebElement facebookLogin;
 	@FindBy(css="button.facebook:nth-child(2)") public WebElement googleLogin;
@@ -23,9 +23,13 @@ public abstract class Login  extends Page{
 	@FindBy(id="email") public WebElement faceEmail;
 	@FindBy(id="pass") public WebElement facePass;
 	@FindBy(id="u_0_2") public WebElement faceLogin;
-	
-		
-	
+
+    @FindBy(css="#page-view-container > div > div.header > div.header-wrapper > div > div.header-right > div > a > i") public WebElement loginButton;
+    @FindBy(css="[name='username'][type='text']")  public WebElement userName;
+	@FindBy(css="[name='password'][type='password']")  public WebElement passWord;
+	@FindBy(css="#dialog > div > div > div > div > form > button")
+			public WebElement login;
+
 	//Put different country use different account for testing
 	   public static Map<String, String> userAccountByCountry, faceBookByCountry, zipByCountry;
 	  // public final String userAccount_US = "iheartRocks999@gmail.com"; //facebook blocked this account
@@ -34,12 +38,18 @@ public abstract class Login  extends Page{
 	   public final String userAccount_NZ = "iheartRocks999@gmail.com";
 	   public final String facebook_AU = "iheart.au999@gmail.com"; //"iheart.aus@gmail.com";
 	   public final String facebook_NZ = "iheart.nz@gmail.com";
-
-    public WebElement loginButton, userName, password, login;
+  
 	
 	public Login()
 	{
 		this(driver);
+		
+	}
+	
+	public Login(WebDriver driver)
+	{
+		super(driver);
+		
 		userAccountByCountry = new HashMap<String, String>();
 		userAccountByCountry.put("US", userAccount_US);
 		userAccountByCountry.put("AU", userAccount_AU);
@@ -56,11 +66,6 @@ public abstract class Login  extends Page{
 		   zipByCountry.put("US", "10013");
 		   zipByCountry.put("AU", "2011");
 		   zipByCountry.put("NZ", "2016");
-	}
-	
-	public Login(WebDriver driver)
-	{
-		super(driver);
 	}
 	
 	
@@ -96,7 +101,7 @@ public abstract class Login  extends Page{
 		}while (count< 6 && !isDone);
 		
     	userName.sendKeys(_userName);
-	    password.sendKeys(_password);
+	    passWord.sendKeys(_password);
 	
 		login.click();
 		

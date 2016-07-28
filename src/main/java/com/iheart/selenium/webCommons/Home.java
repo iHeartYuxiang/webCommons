@@ -8,7 +8,7 @@ import org.openqa.selenium.By;
 
 import java.util.List;
 
-public abstract class Home extends Page{
+public  class Home extends Page{
 	
 	public WebElement subMenu;  
 	public By chooseMenuBy;

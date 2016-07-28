@@ -43,7 +43,7 @@ public abstract class Page {
 	public WebElement subMenu; //Usually contains filter, tiles
 	   public WebElement filter; //or subMenu
 	   
-	   public WebElement stationTiles;
+	  // public WebElement stationTiles;
 	   public By chooseStationBy;
 	   public By choosePlayIconBy;//for web only
 	   public By chooseStationLogoBy ;
@@ -223,6 +223,13 @@ public abstract class Page {
 	{
 		return PASSWORD;
 	}
+	
+	
+	public static WebDriver getDriver()
+	{
+		return driver;
+	}
+	
 	
 	
     public static void takeScreenshot(WebDriver driver, String testMethod) throws Exception 

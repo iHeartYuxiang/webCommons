@@ -2,9 +2,11 @@ package com.iheart.selenium.webCommons;
 
 import com.iheart.selenium.utils.WaitUtility;
 
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WebDriver;
 
@@ -75,7 +77,6 @@ public  class Player extends Page{
     		return false;
     	}
     }
-	
 	
 
     public boolean isFullScreenMode()
@@ -417,5 +418,27 @@ public  class Player extends Page{
 		return playerStation.getText();
 	}
 	
+	public void gotoListenHistory()
+	{
+		try{
+			listenHistory.click();
+		}catch(Exception e)
+		{
+			//In case that page is resized:
+			more.click();
+			//click on dropdown. 
+			Actions action = new Actions(driver);
+			
+	    	WebElement we = driver.findElement(By.cssSelector("#player > div.player-left > div.dropdown-trigger.align-right.align-bottom.now-playing-options.hide > div:nth-child(1) > button > i"));
+	    													    
+	    	try{
+	    	  action.moveToElement(we).moveToElement(driver.findElement(By.cssSelector("#player > div.player-left > div.dropdown-trigger.align-right.align-bottom.now-playing-options > div > nav > ul > li:nth-child(4) > a"))).click().build().perform();
+	    	}catch(Exception eX)
+	    	{
+	    		
+	    	}
+		
+		}
+	}
 	
 }

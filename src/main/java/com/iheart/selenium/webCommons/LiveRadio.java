@@ -13,8 +13,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 
 
-public abstract class LiveRadio extends Page{
-	
+public  class LiveRadio extends Page{
 	
 	
 	//Filter station
@@ -83,7 +82,6 @@ public abstract class LiveRadio extends Page{
        return  chosenStationName;
        
 	}
-	
 	
 	
 }

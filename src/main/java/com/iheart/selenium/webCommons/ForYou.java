@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-public abstract class ForYou extends Page{
+public  class ForYou extends Page{
 	/*
    public WebElement firstStation;
    public WebElement stationPlaying;

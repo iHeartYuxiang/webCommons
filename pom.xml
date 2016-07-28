@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.iheart.selenium</groupId>
-  <artifactId>webAutomation</artifactId>
+  <artifactId>webCommons</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>webAutomation</name>
+  <name>webCommons</name>
   <url>http://maven.apache.org</url>
 
   
