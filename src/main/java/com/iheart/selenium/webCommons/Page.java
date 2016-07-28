@@ -43,7 +43,7 @@ public abstract class Page {
 	public WebElement subMenu; //Usually contains filter, tiles
 	   public WebElement filter; //or subMenu
 	   
-	  // public WebElement stationTiles;
+	   public WebElement stationTiles;
 	   public By chooseStationBy;
 	   public By choosePlayIconBy;//for web only
 	   public By chooseStationLogoBy ;

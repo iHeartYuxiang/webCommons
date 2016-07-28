@@ -10,24 +10,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public  class ForYou extends Page{
 	/*
-   public WebElement firstStation;
-   public WebElement stationPlaying;
-   
-   
-  
-   //for create station
-   public WebElement stationPlay;
-   
-	    
-    public ForYou()
-    {
-    	this(driver);
-    }
-    
-    public ForYou(WebDriver driver)
-    {
-    	super(driver);
-    }
+     To be implemented
 
 	*/    
 	    

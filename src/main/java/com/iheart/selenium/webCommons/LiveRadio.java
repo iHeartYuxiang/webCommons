@@ -1,16 +1,16 @@
 package com.iheart.selenium.webCommons;
 
-//import com.iheart.selenium.utils.WaitUtility;
 
 
 import java.util.List;
-import java.util.ArrayList;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
+
+import com.iheart.selenium.utils.WaitUtility;
 
 
 public  class LiveRadio extends Page{
@@ -42,21 +42,11 @@ public  class LiveRadio extends Page{
    }
    
 	
-	public void filterLiveStation()
-	{   
-		filterStation();
-	    
-		String chosenStation = playFirstStation();
-		
-		System.out.println("chosen station :" + chosenStation);
-		
-	}
 	
-	
-	private void filterStation()
+	public void filterStation()
 	{   
 	    new Select(country).selectByIndex(1);
-		
+		WaitUtility.sleep(1000);
 		new Select(driver.findElement(By.name("city"))).selectByIndex(1);
 		  
 	}	

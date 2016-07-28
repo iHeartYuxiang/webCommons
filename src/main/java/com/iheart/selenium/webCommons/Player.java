@@ -441,4 +441,9 @@ public  class Player extends Page{
 		}
 	}
 	
+	public WebElement getPlayerSong()
+	{
+		return playerSong;
+	}
+	
 }

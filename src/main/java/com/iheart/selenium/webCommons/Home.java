@@ -85,11 +85,5 @@ public  class Home extends Page{
     }
 	    
 	
-	
-    public void locateElements()
-    {
-    	
-    }
-	
 
 }
